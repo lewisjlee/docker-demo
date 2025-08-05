@@ -23,8 +23,8 @@ jobs:
 
     - name: Setup Yarn Berry
       run: |
-        yarn install --immutable
         yarn set version berry
+        yarn install --immutable
 
     - name: Cache Yarn
       uses: actions/cache@v3
