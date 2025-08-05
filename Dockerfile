@@ -24,4 +24,4 @@ USER nodejs
 EXPOSE 3000
 
 # 애플리케이션 실행 (PnP 모드)
-CMD ["node", "index.js"]
+CMD ["yarn", "node", "index.js"]
