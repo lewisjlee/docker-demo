@@ -19,5 +19,5 @@
     "mocha": "^11.7.1",
     "ms": "^2.1.1"
   },
-  "packageManager": "yarn@1.22.22"
+  "packageManager": "yarn@4.9.2"
 }
