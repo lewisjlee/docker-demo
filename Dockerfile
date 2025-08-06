@@ -11,7 +11,6 @@ WORKDIR /app
 # Yarn Berry 설정 파일들 복사
 COPY --chown=nodejs:nodejs package.json yarn.lock* .yarnrc.yml ./
 COPY --chown=nodejs:nodejs .yarn ./.yarn
-# COPY --chown=nodejs:nodejs .pnp.cjs .pnp.loader.mjs ./
 
 # 소스 코드 복사
 COPY --chown=nodejs:nodejs index.js ./
@@ -24,4 +23,4 @@ USER nodejs
 EXPOSE 3000
 
 # 애플리케이션 실행 (PnP 모드)
-CMD ["yarn", "node", "index.js"]
+CMD ["node", "index.js"]
