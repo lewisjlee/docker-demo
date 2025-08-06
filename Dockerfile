@@ -8,9 +8,8 @@ RUN adduser -S nodejs -u 1001
 # 작업 디렉토리 설정
 WORKDIR /app
 
-# Yarn Berry 설정 파일들 복사
-COPY --chown=nodejs:nodejs package.json yarn.lock* .yarnrc.yml ./
-COPY --chown=nodejs:nodejs .yarn ./.yarn
+# 의존성 패키지 복사
+COPY --chown=nodejs:nodejs package.json ./
 COPY --chown=nodejs:nodejs node_modules ./node_modules
 
 # 소스 코드 복사
