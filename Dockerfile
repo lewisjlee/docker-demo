@@ -9,7 +9,9 @@ RUN adduser -S nodejs -u 1001
 WORKDIR /app
 
 # 의존성 패키지 복사
+# 종종 런타임에서 메타 정보 확인이나 로깅 용도로 사용
 COPY --chown=nodejs:nodejs package.json ./
+# 실행 시 express 등 패키지를 사용하기 위해 필요
 COPY --chown=nodejs:nodejs node_modules ./node_modules
 
 # 소스 코드 복사
